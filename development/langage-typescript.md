@@ -6,14 +6,58 @@
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- l'intéret de TypeScript dans l'IDE ❌ / ✔️
-- les types de bases ❌ / ✔️
-- comment et pourquoi étendre une interface ❌ / ✔️
-- les classes et les decorators ❌ / ✔️
+- l'intéret de TypeScript dans l'IDE ✔️
+// help catch mistakes early through a type system and to make JavaScript development more efficient
+- les types de bases ✔️
+// Boolean · Number · String · Array · Tuple · Enum · Unknown · Any.
+- comment et pourquoi étendre une interface ✔️
+// type checking focuses on the shape that values have. 
+- les classes et les decorators ✔️
 
 ## 💻 J'utilise
 
-### Un exemple personnel commenté ❌ / ✔️
+### Un exemple personnel commenté ✔️
+import { Address } from "./Address.js";
+
+export class Person {
+  private _name: string;
+  private _gender: string;
+  private _address: Address;
+
+  constructor(name: string, gender: string, address: Address) {
+    this._name = name;
+    this._gender = gender;
+    this._address = address;
+  }
+
+  public get name(): string {
+    return this._name;
+  }
+
+  public get gender() {
+    return this._gender;
+  }
+
+  public get address() {
+    return this._address;
+  }
+
+  public set name(name: string) {
+    this._name = name;
+  }
+
+  public set gender(gender: string) {
+    this._gender = gender;
+  }
+
+  public set address(address: Address) {
+    this._address = address;
+  }
+}
+
+const testAddressOne = new Address("Champs Elysée", "Paris", "75008");
+
+export const testPersonOne = new Person("Bert", "M", testAddressFour);
 
 ### Utilisation dans un projet ❌ / ✔️
 
