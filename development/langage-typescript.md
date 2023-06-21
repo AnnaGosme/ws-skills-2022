@@ -7,12 +7,18 @@
 ## 🎓 J'ai compris et je peux expliquer
 
 - l'intéret de TypeScript dans l'IDE ✔️
-// help catch mistakes early through a type system and to make JavaScript development more efficient
+Typescript permet de rajouter une couche de protection par dessus le Javascript et offre des fonctionnalités du développement orienté objet (typage, interfaces, classes abstraites, encapsulation, inheritance)
+
 - les types de bases ✔️
-// Boolean · Number · String · Array · Tuple · Enum · Unknown · Any.
+ Boolean · Number · String · Array · Tuple · Enum · Unknown · Any.
+
 - comment et pourquoi étendre une interface ✔️
-// type checking focuses on the shape that values have. 
+Pour importer les propriétés de cette interface. Cela aide à créer des composants petits et réutilisables.
+
 - les classes et les decorators ✔️
+  Une classe en termes de Programmation orienté objet est un modèle pour la création d’objets. Une classe encapsule les données de l’objet.
+  Les décorateurs sont des fonctions capables d’étendre le comportement d’autres fonctions sans les modifier. Le Décorateur est donc une fonction      qui sera exécutée préalablement à la classe, et qui lui fournira du comportement additionel à celui que l’on a nous-même défini. On appelle          cela une fonction d’ordre supérieur.
+  
 
 ## 💻 J'utilise
 
@@ -58,6 +64,8 @@ export class Person {
 const testAddressOne = new Address("Champs Elysée", "Paris", "75008");
 
 export const testPersonOne = new Person("Bert", "M", testAddressFour);
+
+Ici nous importons la classe Address dans le fichier de la class Person, car nous allons définir une class Person qui contiendra la classe Address. Une personne de class Person aura forcément un adresse de class Address. Ensuite nous créons une instance de la class Address, appelée testAddressOne, qui sera l'adresse de la nouvelle instance de Person, apellée testPersonOne. 
 
 ### Utilisation dans un projet ❌ / ✔️
 
