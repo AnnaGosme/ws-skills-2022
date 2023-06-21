@@ -16,12 +16,14 @@
 
 ## 💻 Je code en Javascript
 
-### Un exemple de code commenté ❌ / ✔️
+### Un exemple de code commenté  ✔️
 
-removeSkill: async (req, res) => {
-    const wilderToUpdate = await datasource
-      .getRepository(Wilder)
-      .findOneBy({ id: parseInt(req.params.wilderId, 10) });
+const cleanServerToken = JSON.stringify(serverToken)
+    .replace(/[\\]/g, "")
+    .replace(/['"]+/g, "");
+  const cleanToken = token?.replace(/[:]+/g, "");
+
+  Ici nous recevons en format JSON un *token* que nous devons d'abord désérialiser en objet, pour ensuite le manipuler en remplacement certains caractères (en utilisant du regex). Nous stockons ce *token* dans une variable nommée cleanToken que nous utiliserons dans les prochaines étapes (à savoir comparer ce *token* envoyé par le serveur au token obtenu dans les paramètres de l'url).
 
 ### Utilisation dans un projet ✔️
 
@@ -37,7 +39,7 @@ Description : Déploiement du projet mentionné plus haut
 
 ### J'ai utilisé ce langage en environement professionnel ✔️
 
-Description : Stage de 6 mois en tant que Dev Front (ReactJS)
+Description : Stage de 6 mois en tant que Dev Front (ReactJS) + alternance chez Accenture
 
 ## 🌐 J'utilise des ressources
 
